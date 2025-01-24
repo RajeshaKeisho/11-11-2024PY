@@ -1,0 +1,22 @@
+{% load custom_filters %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Custom Filters Example:</h2>
+    <h3>{{name|add_hello}}</h3>
+    <h3>Square of 5: {{5|square}}</h3>
+    <h3>Reverse of "Python": {{'Python'|reverse_string}}</h3>
+    <h3>Absolute of -10:{{-10|absolute}}</h3>
+    <h3>Factorial of 7:{{7|factorial}}</h3>
+    <h3>Even or Odd (8):{{8|even_or_odd}}</h3>
+    <p>{{"Lokesh"|length}}</p>
+
+
+
+</body>
+</html>

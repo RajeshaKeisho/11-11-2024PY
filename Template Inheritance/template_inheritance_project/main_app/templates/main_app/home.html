@@ -1,0 +1,69 @@
+{% extends "main_app/base.html" %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <h1>Welcome to Our Website!</h1>
+    <p>Your one-stop solution for all your needs.</p>
+    <div class="hero-buttons">
+        <a href="{% url 'about' %}" class="btn btn-primary">Learn More</a>
+        <a href="{% url 'contact' %}" class="btn btn-secondary">Contact Us</a>
+    </div>
+</section>
+
+<!-- Latest Articles Section -->
+<section class="articles">
+    <h2>Latest Articles</h2>
+    <div class="articles-container">
+        <div class="article">
+            <img src="{% static 'images/article.jpg' %}" alt="Article 1">
+            <h3>Understanding Django Template Inheritance</h3>
+            <p>Django’s template inheritance system allows developers to create reusable layouts for their applications...</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+        <div class="article">
+            <img src="{% static 'images/article.jpg' %}" alt="Article 2">
+            <h3>10 CSS Tricks for Responsive Design</h3>
+            <p>Learn how to make your website responsive with these simple yet powerful CSS tips...</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+        <div class="article">
+            <img src="{% static 'images/article.jpg' %}" alt="Article 3">
+            <h3>Introduction to Python Generators</h3>
+            <p>Generators in Python allow you to create iterators in an efficient and elegant way. Here's how...</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features">
+    <h2>Our Features</h2>
+    <div class="features-container">
+        <!-- Dynamically loaded cards via JS -->
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials">
+    <h2>What Our Users Say</h2>
+    <div class="testimonials-slider">
+        <div class="testimonial">
+            <p>"This is the best service I’ve ever used!"</p>
+            <span>- Jane Doe</span>
+        </div>
+        <div class="testimonial">
+            <p>"Amazing experience and outstanding support!"</p>
+            <span>- John Smith</span>
+        </div>
+        <div class="testimonial">
+            <p>"Highly recommend this to everyone!"</p>
+            <span>- Emily Davis</span>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
