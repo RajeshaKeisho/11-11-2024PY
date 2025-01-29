@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} {{object.title}} - Book Detail {% endblock  %}
+
+{% block content %}
+<h1 class="mt-5">{{object.title}}</h1>
+<p>Bil:{{object.content}}</p>
+<p>Published on: {{object.pub_date}}</p>
+<p>Author: {{object.author.name}}</p>
+
+{% endblock  %}

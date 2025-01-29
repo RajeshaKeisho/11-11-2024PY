@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block  title %} Authors 
+{% endblock  %}
+
+{% block content %}
+
+<h1 class="mt-5">Authors</h1>
+<ul class="list-group">
+    {% for author in object_list %}
+    <li class="list-group-item"><a href="{% url 'author-detail' author.id %}">{{author.name}}</a></li>
+    {% endfor %}
+</ul>
+{% endblock  %}

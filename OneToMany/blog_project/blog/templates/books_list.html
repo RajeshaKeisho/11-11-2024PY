@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block  title %}Books{% endblock  %}
+
+{% block content %}
+
+<h1 class="mt-5">Books</h1>
+<ul class="list-group">
+    {% for book in  object_list %}
+    <li class="list-group-item"><a href="{% url 'book-detail' book.id %}">{{book.title}} by {{book.author.name}}</a></li>
+    {% endfor %}
+</ul>
+{% endblock  %}
