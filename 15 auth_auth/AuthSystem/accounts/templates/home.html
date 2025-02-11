@@ -1,0 +1,25 @@
+{% extends 'base.html' %} 
+{% block title %}Home - AuthSystem{% endblock %} 
+
+{% block content %}
+<h1>Welcome to AuthSystem</h1>
+{% if user.is_authenticated %}
+<p><strong> Hello, {{ user.username }}</strong>! You are logged in.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quos
+    sit incidunt ab alias fugiat optio nulla quae, odio asperiores voluptatem, quia
+    id fugit. Impedit explicabo ratione provident excepturi, distinctio delectus,
+    minus aperiam, quos mollitia voluptates rerum autem voluptate facere recusandae.
+    Ut eius doloribus saepe unde laborum cupiditate debitis voluptatibus architecto!
+    Aliquam similique esse aspernatur facere delectus velit unde quidem, nisi quia
+    nobis dolores reprehenderit vero assumenda nostrum accusamus maiores neque
+    reiciendis magnam iste odit incidunt sint nesciunt veniam consequatur.
+    Accusamus, earum sed cum cupiditate dolor laudantium voluptate non molestiae
+    veniam omnis sint repellendus numquam, delectus rerum aliquid at quibusdam!</p>
+{% else %}
+<p>
+  Please <a href="{% url 'login' %}">login</a> or
+  <a href="{% url 'register' %}">register</a> to access more features.
+</p>
+{% endif %} 
+
+{% endblock %}
