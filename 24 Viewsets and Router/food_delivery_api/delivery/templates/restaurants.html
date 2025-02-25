@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Restaurants{% endblock %}
+
+{% block content %}
+<h2>Restaurants</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for restaurant in restaurants %}
+        <tr>
+            <td>{{ restaurant.name }}</td>
+            <td>{{ restaurant.address }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
