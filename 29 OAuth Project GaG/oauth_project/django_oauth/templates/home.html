@@ -1,0 +1,35 @@
+
+<!-- templates/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Home</h1>
+        <p>Welcome to the Home Page!</p>
+        <a href="{% url 'logout' %}" class="btn btn-danger">Logout</a>
+        <a href="{% url 'profile' %}" class="btn btn-info">Profile</a>
+    </div>
+</body>
+</html>
+
+
+{% comment %} <!-- templates/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Home</h1>
+    <a href="{% url 'logout' %}">Logout</a>
+    <a href="{% url 'profile' %}">Profile</a>
+</body>
+</html> {% endcomment %}
